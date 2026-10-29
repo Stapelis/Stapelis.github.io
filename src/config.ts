@@ -65,19 +65,16 @@ export const siteConfig = {
 {
       school: "ENSEEIHT",
       degree: "Bachelor of Science in Computer Science",
-      dateRange: "2026 - Now",
-      ],
+      dateRange: "2026 - Now"
     },
   {
       school: "Prépa T²",
-      dateRange: "2024-2026",
-      ],
+      dateRange: "2024-2026"
     },
     {
       school: "Lycée Bellevue",
       degree: "French Baccalauréat",
-      dateRange: "2021-2024",
-      ],
+      dateRange: "2021-2024"
     },
     // ... autre formation
   ],
