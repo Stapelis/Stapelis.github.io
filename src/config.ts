@@ -47,7 +47,7 @@ export const siteConfig = {
     },
   },
   aboutMe:
-    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and creating practical solutions.",
+    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and working on projects that combine technical depth with practical impact.",
   skills: ["Python"],
   projects: [
     {
@@ -76,8 +76,16 @@ export const siteConfig = {
       },
       bullets: [
         {
-          fr: "À compléter",
-          en: "To be filled in",
+          fr: "Découverte du fonctionnement de l'équipe ACADIE et de ses objectifs de recherche.",
+          en: "Discovery of how the ACADIE team works and of its research objectives.",
+        },
+        {
+          fr: "Participation à l'analyse et au développement de solutions autour des outils et des projets de l'équipe.",
+          en: "Participation in the analysis and development of solutions around the team's tools and projects.",
+        },
+        {
+          fr: "Apprentissage des méthodes de travail en environnement scientifique et technique.",
+          en: "Learning the working methods in a scientific and technical environment.",
         },
       ],
     },
