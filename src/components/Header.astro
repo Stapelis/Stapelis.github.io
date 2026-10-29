@@ -1,78 +1,44 @@
 ---
 import { siteConfig } from "../config";
-
-const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
-const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
-<header
-  id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
->
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
-      <li>
-        <a
-          href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
-        >
-          About
-        </a>
-      </li>
-      {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Projects
-            </a>
-          </li>
-        )
-      }
-      {
-        hasExperience && (
-          <li>
-            <a
-              href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Experience
-            </a>
-          </li>
-        )
-      }
-      {
-        hasEducation && (
-          <li>
-            <a
-              href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              Education
-            </a>
-          </li>
-        )
-      }
-    </ul>
+<header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
+  <!-- Liens de navigation (sans le nom "Thomas Stapelfeld") -->
+  <nav class="flex items-center gap-6">
+    <a href="#about" class="text-sm font-medium hover:underline">About</a>
+    <a href="#projects" class="text-sm font-medium hover:underline">Projects</a>
+    <a href="#experience" class="text-sm font-medium hover:underline">Experience</a>
+    <a href="#education" class="text-sm font-medium hover:underline">Education</a>
   </nav>
+
+  <!-- Bouton de langue interactif -->
+  <button 
+    id="lang-toggle" 
+    class="px-3 py-1.5 text-sm font-medium border rounded-md transition hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
+  >
+    🌐 <span id="lang-text">EN</span>
+  </button>
 </header>
 
 <script>
-  window.addEventListener("scroll", () => {
-    const header = document.getElementById("header");
-    if (window.scrollY > 100) {
-      header?.classList.add("bg-white/80", "backdrop-blur-sm");
-    } else {
-      header?.classList.remove("bg-white/80", "backdrop-blur-sm");
+  const toggleBtn = document.getElementById('lang-toggle');
+  const langText = document.getElementById('lang-text');
+
+  let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
+
+  function updateLanguage(lang: string) {
+    localStorage.setItem('portfolio-lang', lang);
+    if (langText) {
+      langText.textContent = lang === 'fr' ? 'EN' : 'FR';
     }
+    document.documentElement.setAttribute('data-lang', lang);
+  }
+
+  updateLanguage(currentLang);
+
+  toggleBtn?.addEventListener('click', () => {
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    updateLanguage(currentLang);
+    window.location.reload();
   });
 </script>
-
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
