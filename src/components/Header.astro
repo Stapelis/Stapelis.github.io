@@ -74,6 +74,7 @@ import { siteConfig } from "../config";
       langText.textContent = lang.toUpperCase();
     }
     document.documentElement.setAttribute('data-lang', lang);
+    document.title = `${siteConfig.name} - ${siteConfig.title[lang]}`;
     document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
       const translatedText = el.getAttribute(`data-${lang}`);
       if (translatedText) {
