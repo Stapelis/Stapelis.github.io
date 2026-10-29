@@ -1,6 +1,9 @@
 export const siteConfig = {
   name: "Thomas Stapelfeld",
-  title: "Engineering student at ENSEEIHT",
+  title: {
+    fr : "Etudiant de première année à l'ENSEEIHT",
+    en : "First year engineering student at ENSEEIHT",
+  },
   accentColor: "#1d4ed8",
   social: {
     email: "thomas.stapelfeld@etu.toulouse-inp.fr",
