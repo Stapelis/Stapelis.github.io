@@ -3,27 +3,51 @@ import { siteConfig } from "../config";
 ---
 
 <header class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-  <!-- Liens de navigation (sans le nom "Thomas Stapelfeld") -->
   <nav class="flex items-center gap-6">
-    <a href="#about" class="text-sm font-medium hover:underline">About</a>
-    <a href="#projects" class="text-sm font-medium hover:underline">Projects</a>
-    <a href="#experience" class="text-sm font-medium hover:underline">Experience</a>
-    <a href="#education" class="text-sm font-medium hover:underline">Education</a>
+    <a
+      href="#about"
+      class="text-sm font-medium hover:underline"
+      data-fr={siteConfig.translations.fr.nav.about}
+      data-en={siteConfig.translations.en.nav.about}
+    >
+      {siteConfig.translations.fr.nav.about}
+    </a>
+    <a
+      href="#projects"
+      class="text-sm font-medium hover:underline"
+      data-fr={siteConfig.translations.fr.nav.projects}
+      data-en={siteConfig.translations.en.nav.projects}
+    >
+      {siteConfig.translations.fr.nav.projects}
+    </a>
+    <a
+      href="#experience"
+      class="text-sm font-medium hover:underline"
+      data-fr={siteConfig.translations.fr.nav.experience}
+      data-en={siteConfig.translations.en.nav.experience}
+    >
+      {siteConfig.translations.fr.nav.experience}
+    </a>
+    <a
+      href="#education"
+      class="text-sm font-medium hover:underline"
+      data-fr={siteConfig.translations.fr.nav.education}
+      data-en={siteConfig.translations.en.nav.education}
+    >
+      {siteConfig.translations.fr.nav.education}
+    </a>
   </nav>
 
-  <!-- Bouton de langue interactif -->
-  <button 
-    id="lang-toggle" 
+  <button
+    id="lang-toggle"
     class="px-3 py-1.5 text-sm font-medium border rounded-md transition hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
   >
-    🌐 <span id="lang-text">EN</span>
+    🌐 <span id="lang-text">FR</span>
   </button>
 </header>
 <script>
-  // Récupère la langue choisie (par défaut 'fr')
   const currentLang = localStorage.getItem('portfolio-lang') || 'fr';
 
-  // Trouve tous les éléments de la page qui possèdent des traductions
   document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
     const translatedText = el.getAttribute(`data-${currentLang}`);
     if (translatedText) {
@@ -37,7 +61,6 @@ import { siteConfig } from "../config";
 
   let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
 
-  // Applique la traduction au chargement
   document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
     const translatedText = el.getAttribute(`data-${currentLang}`);
     if (translatedText) {
@@ -45,19 +68,23 @@ import { siteConfig } from "../config";
     }
   });
 
-  function updateLanguage(lang: string) {
+  function updateLanguage(lang) {
     localStorage.setItem('portfolio-lang', lang);
     if (langText) {
-      // Affiche la langue actuelle en majuscules (FR ou EN)
       langText.textContent = lang.toUpperCase();
     }
     document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
+      const translatedText = el.getAttribute(`data-${lang}`);
+      if (translatedText) {
+        el.textContent = translatedText;
+      }
+    });
   }
 
   updateLanguage(currentLang);
 
   toggleBtn?.addEventListener('click', () => {
-    // Alterne entre 'fr' et 'en'
     currentLang = currentLang === 'fr' ? 'en' : 'fr';
     updateLanguage(currentLang);
     window.location.reload();
