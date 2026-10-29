@@ -41,53 +41,44 @@ import { siteConfig } from "../config";
   <button
     id="lang-toggle"
     class="px-3 py-1.5 text-sm font-medium border rounded-md transition hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
+    aria-label="Toggle language"
   >
     🌐 <span id="lang-text">FR</span>
   </button>
 </header>
+
 <script>
-  const currentLang = localStorage.getItem('portfolio-lang') || 'fr';
+  import { siteConfig } from "../config";
 
-  document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
-    const translatedText = el.getAttribute(`data-${currentLang}`);
-    if (translatedText) {
-      el.textContent = translatedText;
-    }
-  });
-</script>
-<script>
-  const toggleBtn = document.getElementById('lang-toggle');
-  const langText = document.getElementById('lang-text');
+  const STORAGE_KEY = "portfolio-lang";
+  const toggleBtn = document.getElementById("lang-toggle");
+  const langText = document.getElementById("lang-text");
 
-  let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
-
-  document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
-    const translatedText = el.getAttribute(`data-${currentLang}`);
-    if (translatedText) {
-      el.textContent = translatedText;
-    }
-  });
+  let currentLang = localStorage.getItem(STORAGE_KEY) || "fr";
 
   function updateLanguage(lang) {
-    localStorage.setItem('portfolio-lang', lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+    document.documentElement.setAttribute("data-lang", lang);
+
     if (langText) {
       langText.textContent = lang.toUpperCase();
     }
-    document.documentElement.setAttribute('data-lang', lang);
-    document.title = `${siteConfig.name} - ${siteConfig.title[lang]}`;
-    document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
+
+    document.querySelectorAll("[data-fr][data-en]").forEach((el) => {
       const translatedText = el.getAttribute(`data-${lang}`);
       if (translatedText) {
         el.textContent = translatedText;
       }
     });
+
+    const pageTitle = siteConfig.title[lang] ?? siteConfig.title.fr;
+    document.title = `${siteConfig.name} - ${pageTitle}`;
   }
 
   updateLanguage(currentLang);
 
-  toggleBtn?.addEventListener('click', () => {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  toggleBtn?.addEventListener("click", () => {
+    currentLang = currentLang === "fr" ? "en" : "fr";
     updateLanguage(currentLang);
-    window.location.reload();
   });
 </script>
