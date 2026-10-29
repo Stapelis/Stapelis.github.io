@@ -75,17 +75,21 @@ export const siteConfig = {
         en: "May 2026 - June 2026",
       },
       bullets: [
-        {
-          fr: "Découverte du fonctionnement de l'équipe ACADIE et de ses objectifs de recherche.",
-          en: "Discovery of how the ACADIE team works and of its research objectives.",
+        { 
+          fr: "Etude de la méthode de Hoare pour la preuve de programmes et des outils Why3 et Coq.",
+          en: "Study of the Hoare method for program verification and the Why3 and Coq tools.",
         },
         {
-          fr: "Participation à l'analyse et au développement de solutions autour des outils et des projets de l'équipe.",
-          en: "Participation in the analysis and development of solutions around the team's tools and projects.",
+          fr: "Application à des algorithmes manipulant des tableaux (vecteurs et matrices).",
+          en: "Application to algorithms that manipulate arrays (vectors and matrices).",
         },
         {
-          fr: "Apprentissage des méthodes de travail en environnement scientifique et technique.",
-          en: "Learning the working methods in a scientific and technical environment.",
+          fr: "Extension de la théorie des matrices. ",
+          en: "Extension of matrix theory.",
+        },
+        {
+          fr: "Expérimentation des assistants de type LLM pour produire des modèles et des preuves.",
+          en: "Experimenting with LLM-type assistants to generate models and proofs.",
         },
       ],
     },
