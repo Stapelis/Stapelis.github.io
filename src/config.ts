@@ -24,7 +24,7 @@ export const siteConfig = {
       educationTitle: "Education",
     },
   },
-  aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
+  aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio.",
   // Les compétences, projets, expériences et formations restent communs ou peuvent être traduits de la même manière
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
@@ -56,7 +56,7 @@ export const siteConfig = {
       title: "Internship in the ACADIE team",
       dateRange: "May 2026 - June 2026",
       bullets: [
-        "A REMPLIR"",
+        "A REMPLIR"
       ],
     },
     // ... autres expériences
