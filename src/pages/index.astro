@@ -8,48 +8,7 @@ import Education from "../components/Education.astro";
 import Footer from "../components/Footer.astro";
 import { siteConfig } from "../config";
 import "../styles/global.css";
-import { siteConfig } from "../config";
 ---
-
-<header class="flex justify-between items-center p-6 max-w-4xl mx-auto">
-  <h1 class="text-xl font-bold">{siteConfig.name}</h1>
-
-  <!-- Bouton de changement de langue -->
-  <button 
-    id="lang-toggle" 
-    class="px-3 py-1.5 text-sm font-medium border rounded-md transition hover:bg-gray-100 flex items-center gap-2 cursor-pointer"
-  >
-    🌐 <span id="lang-text">EN</span>
-  </button>
-</header>
-
-<script>
-  // Script exécuté côté client pour gérer le clic et stocker la langue
-  const toggleBtn = document.getElementById('lang-toggle');
-  const langText = document.getElementById('lang-text');
-
-  // Récupérer la langue actuelle (par défaut 'fr')
-  let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
-
-  function updateLanguage(lang: string) {
-    localStorage.setItem('portfolio-lang', lang);
-    if (langText) {
-      langText.textContent = lang === 'fr' ? 'EN' : 'FR';
-    }
-    // Vous pouvez ici déclencher la mise à jour des textes de la page
-    document.documentElement.setAttribute('data-lang', lang);
-  }
-
-  // Initialisation au chargement
-  updateLanguage(currentLang);
-
-  toggleBtn?.addEventListener('click', () => {
-    currentLang = currentLang === 'fr' ? 'en' : 'fr';
-    updateLanguage(currentLang);
-    // Recharge la page pour appliquer la langue sur tous les composants statiques
-    window.location.reload();
-  });
-</script>
 
 <html lang="en">
   <head>
@@ -78,4 +37,3 @@ import { siteConfig } from "../config";
     <Footer />
   </body>
 </html>
-
