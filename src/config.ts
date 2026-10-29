@@ -3,29 +3,30 @@ export const siteConfig = {
   title: "Engineering student at ENSEEIHT",
   accentColor: "#1d4ed8",
   social: {
-    email: "thomas.stapelfeld@etu.toulouse-inp.fr"
+    email: "thomas.stapelfeld@etu.toulouse-inp.fr",
   },
-  // On sépare les contenus textuels par langue
   translations: {
     fr: {
-      description: "Site portfolio de Thomas Stapelfeld",
-      aboutMe: "Je suis étudiant en ingénierie et passionné par le développement logiciel.",
+      description: "Portfolio de Thomas Stapelfeld",
+      aboutMe:
+        "Je suis étudiant en ingénierie, curieux et passionné par le développement logiciel et les systèmes intelligents.",
       skillsTitle: "Compétences",
       projectsTitle: "Projets",
       experienceTitle: "Expérience professionnelle",
       educationTitle: "Formation",
     },
     en: {
-      description: "Portfolio website of Thomas Stapelfeld",
-      aboutMe: "I am an engineering student passionate about software development.",
+      description: "Thomas Stapelfeld's portfolio",
+      aboutMe:
+        "I am an engineering student, curious and passionate about software development and intelligent systems.",
       skillsTitle: "Skills",
       projectsTitle: "Projects",
       experienceTitle: "Professional Experience",
       educationTitle: "Education",
     },
   },
-  aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio.",
-  // Les compétences, projets, expériences et formations restent communs ou peuvent être traduits de la même manière
+  aboutMe:
+    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and creating projects that combine technical rigor with real-world impact.",
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
     {
@@ -55,30 +56,27 @@ export const siteConfig = {
       company: "IRIT",
       title: "Internship in the ACADIE team",
       dateRange: "May 2026 - June 2026",
-      bullets: [
-        "A REMPLIR"
-      ],
+      bullets: ["To be filled in"],
     },
-    // ... autres expériences
   ],
   education: [
-{
+    {
       school: "ENSEEIHT",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2026 - Now",
+      degree: "Bachelor in Computer Science",
+      dateRange: "2026 - Present",
       achievements: [],
     },
-  {
+    {
       school: "Prépa T²",
-      dateRange: "2024-2026",
+      degree: "Scientific preparatory class",
+      dateRange: "2024 - 2026",
       achievements: [],
     },
     {
       school: "Lycée Bellevue",
       degree: "French Baccalauréat",
-      dateRange: "2021-2024",
+      dateRange: "2021 - 2024",
       achievements: [],
     },
-    // ... autre formation
   ],
 };
