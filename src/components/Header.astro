@@ -19,7 +19,18 @@ import { siteConfig } from "../config";
     🌐 <span id="lang-text">EN</span>
   </button>
 </header>
+<script>
+  // Récupère la langue choisie (par défaut 'fr')
+  const currentLang = localStorage.getItem('portfolio-lang') || 'fr';
 
+  // Trouve tous les éléments de la page qui possèdent des traductions
+  document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
+    const translatedText = el.getAttribute(`data-${currentLang}`);
+    if (translatedText) {
+      el.textContent = translatedText;
+    }
+  });
+</script>
 <script>
   const toggleBtn = document.getElementById('lang-toggle');
   const langText = document.getElementById('lang-text');
