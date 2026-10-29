@@ -1,12 +1,9 @@
 export const siteConfig = {
   name: "Thomas Stapelfeld",
-  title: "Senior Software Engineer",
+  title: "Engineering student at ENSEEIHT",
   accentColor: "#1d4ed8",
   social: {
-    email: "thomas.stapelfeld@etu.toulouse-inp.fr",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "thomas.stapelfeld@etu.toulouse-inp.fr"
   },
   // On sépare les contenus textuels par langue
   translations: {
@@ -27,6 +24,7 @@ export const siteConfig = {
       educationTitle: "Education",
     },
   },
+  aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
   // Les compétences, projets, expériences et formations restent communs ou peuvent être traduits de la même manière
   skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
   projects: [
@@ -54,26 +52,31 @@ export const siteConfig = {
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "IRIT",
+      title: "Internship in the ACADIE team",
+      dateRange: "May 2026 - June 2026",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "A REMPLIR"",
       ],
     },
     // ... autres expériences
   ],
   education: [
-    {
-      school: "University Name",
+{
+      school: "ENSEEIHT",
       degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
-      achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+      dateRange: "2026 - Now",
+      ],
+    },
+  {
+      school: "Prépa T²",
+      dateRange: "2024-2026",
+      ],
+    },
+    {
+      school: "Lycée Bellevue",
+      degree: "French Baccalauréat",
+      dateRange: "2021-2024",
       ],
     },
     // ... autre formation
