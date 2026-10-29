@@ -37,10 +37,19 @@ import { siteConfig } from "../config";
 
   let currentLang = localStorage.getItem('portfolio-lang') || 'fr';
 
+  // Applique la traduction au chargement
+  document.querySelectorAll('[data-fr][data-en]').forEach((el) => {
+    const translatedText = el.getAttribute(`data-${currentLang}`);
+    if (translatedText) {
+      el.textContent = translatedText;
+    }
+  });
+
   function updateLanguage(lang: string) {
     localStorage.setItem('portfolio-lang', lang);
     if (langText) {
-      langText.textContent = lang === 'fr' ? 'EN' : 'FR';
+      // Affiche la langue actuelle en majuscules (FR ou EN)
+      langText.textContent = lang.toUpperCase();
     }
     document.documentElement.setAttribute('data-lang', lang);
   }
@@ -48,6 +57,7 @@ import { siteConfig } from "../config";
   updateLanguage(currentLang);
 
   toggleBtn?.addEventListener('click', () => {
+    // Alterne entre 'fr' et 'en'
     currentLang = currentLang === 'fr' ? 'en' : 'fr';
     updateLanguage(currentLang);
     window.location.reload();
