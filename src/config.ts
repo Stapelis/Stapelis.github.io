@@ -45,32 +45,8 @@ export const siteConfig = {
   },
   aboutMe:
     "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and creating practical solutions.",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+  skills: ["Python"],
   projects: [
-    {
-      name: {
-        fr: "AI Dev Roundup Newsletter",
-        en: "AI Dev Roundup Newsletter",
-      },
-      description: {
-        fr: "Un seul e-mail. Cinq minutes. Chaque mardi. Actualités IA essentielles, tendances, bibliothèques prêtes à l'emploi, outils puissants et exemples concrets.",
-        en: "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples.",
-      },
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: {
-        fr: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-        en: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
-      },
-      description: {
-        fr: "Maîtrisez l'art de construire des extensions Chrome full-stack de qualité production avec des technologies web modernes et les meilleures pratiques.",
-        en: "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices.",
-      },
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
     {
       name: {
         fr: "ExtensionKit",
