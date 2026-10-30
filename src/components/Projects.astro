@@ -8,9 +8,9 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
     <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
+          <div class="lg:col-span-4 lg:pr-4">
             <h2
-              class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900"
+              class="max-w-[320px] text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-gray-900 leading-[0.9] tracking-[-0.06em]"
               data-fr={siteConfig.translations.fr.projectsTitle}
               data-en={siteConfig.translations.en.projectsTitle}
             >
@@ -45,7 +45,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       }`}
                     >
                       {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white shadow-lg">
+                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white shadow-sm">
                           <svg
                             class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                             fill="none"
