@@ -147,8 +147,8 @@ export const siteConfig = {
         en: "ENSEEIHT",
       },
       degree: {
-        fr: "Licence d'informatique",
-        en: "Bachelor in Computer Science",
+        fr: "Ingénieur ENSEEIHT en Sciences du numériques et télécommunication",
+        en: "Engineering degree",
       },
       dateRange: {
         fr: "2026 - Aujourd'hui",
