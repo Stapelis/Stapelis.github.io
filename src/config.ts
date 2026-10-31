@@ -1,8 +1,8 @@
 export const siteConfig = {
   name: "Thomas Stapelfeld",
   title: {
-    fr : "Etudiant de première année à l'ENSEEIHT",
-    en : "First year engineering student at ENSEEIHT",
+    fr: "Etudiant de première année à l'ENSEEIHT",
+    en: "First year engineering student at ENSEEIHT",
   },
   accentColor: "#1d4ed8",
   social: {
@@ -20,11 +20,13 @@ export const siteConfig = {
         projects: "Projets",
         experience: "Expérience",
         education: "Formation",
+        languages: "Langues",
       },
       skillsTitle: "Compétences",
       projectsTitle: "Projets",
       experienceTitle: "Expérience",
       educationTitle: "Formation",
+      languagesTitle: "Langues",
       allRightsReserved: "Tous droits réservés.",
     },
     en: {
@@ -38,17 +40,61 @@ export const siteConfig = {
         projects: "Projects",
         experience: "Experience",
         education: "Education",
+        languages: "Languages",
       },
       skillsTitle: "Skills",
       projectsTitle: "Projects",
       experienceTitle: "Experience",
       educationTitle: "Education",
+      languagesTitle: "Languages",
       allRightsReserved: "All rights reserved.",
     },
   },
   aboutMe:
-    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and working on projects that combine technical depth with practical impact.",
+    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and creating thoughtful solutions.",
   skills: ["Python"],
+  languages: [
+    {
+      name: {
+        fr: "Français",
+        en: "French",
+      },
+      level: {
+        fr: "Langue maternelle",
+        en: "Native",
+      },
+    },
+    {
+      name: {
+        fr: "Anglais",
+        en: "English",
+      },
+      level: {
+        fr: "Niveau B2",
+        en: "B2 level",
+      },
+    },
+    {
+      name: {
+        fr: "Espagnol",
+        en: "Spanish",
+      },
+      level: {
+        fr: "Niveau B1",
+        en: "B1 level",
+      },
+    },
+    {
+      name: {
+        fr: "Chinois",
+        en: "Chinese",
+      },
+      level: {
+        fr: "En cours d'apprentissage",
+        en: "Currently studying",
+      },
+    },
+  ],
   projects: [
     {
       name: {
@@ -75,7 +121,7 @@ export const siteConfig = {
         en: "May 2026 - June 2026",
       },
       bullets: [
-        { 
+        {
           fr: "Etude de la méthode de Hoare pour la preuve de programmes et des outils Why3 et Coq.",
           en: "Study of the Hoare method for program verification and the Why3 and Coq tools.",
         },
@@ -84,7 +130,7 @@ export const siteConfig = {
           en: "Application to algorithms that manipulate arrays (vectors and matrices).",
         },
         {
-          fr: "Extension de la théorie des matrices. ",
+          fr: "Extension de la théorie des matrices.",
           en: "Extension of matrix theory.",
         },
         {
@@ -142,3 +188,4 @@ export const siteConfig = {
     },
   ],
 };
+

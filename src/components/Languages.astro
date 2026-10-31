@@ -1,0 +1,52 @@
+---
+import { siteConfig } from "../config";
+const hasLanguages = siteConfig.languages && siteConfig.languages.length > 0;
+---
+
+{
+  hasLanguages && (
+    <section id="languages" class="p-8 sm:p-12 md:p-16 lg:p-24">
+      <div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          <div class="lg:col-span-4 lg:pr-4">
+            <h2
+              class="max-w-[280px] text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-bold text-gray-900 leading-[0.9] tracking-[-0.06em]"
+              data-fr={siteConfig.translations.fr.languagesTitle}
+              data-en={siteConfig.translations.en.languagesTitle}
+            >
+              {siteConfig.translations.fr.languagesTitle}
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+          <div class="lg:col-span-8">
+            <div class="grid gap-4 sm:grid-cols-2">
+              {siteConfig.languages.map((language) => (
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 hover:shadow-md transition-shadow duration-300">
+                  <p
+                    class="text-lg sm:text-xl font-semibold text-gray-900"
+                    data-fr={language.name.fr}
+                    data-en={language.name.en}
+                  >
+                    {language.name.fr}
+                  </p>
+                  <p
+                    class="mt-2 text-sm sm:text-base"
+                    style={{ color: siteConfig.accentColor }}
+                    data-fr={language.level.fr}
+                    data-en={language.level.en}
+                  >
+                    {language.level.fr}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
