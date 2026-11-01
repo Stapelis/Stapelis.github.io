@@ -58,7 +58,7 @@ export const siteConfig = {
   },
   aboutMe:
     "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and applying my knowledge to meaningful projects.",
-  skills: ["Python", "MATLAB", "Ada", "Linux", "Copilot", "Git"],
+  skills: ["Python", "MATLAB", "Ada", "Linux", "Copilot", "Git", "Why3", "Coq"],
   sportsAndActivities: [
     {
       name: {
