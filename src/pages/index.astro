@@ -39,6 +39,29 @@ import "../styles/global.css";
       <Projects />
       <Experience />
       <Education />
+      <section id="elevator-pitch" class="p-8 sm:p-12 md:p-16 lg:p-24">
+        <div class="mx-auto max-w-5xl">
+          <h2
+            class="mb-6 text-3xl font-bold"
+            data-fr={siteConfig.translations.fr.elevatorPitchTitle}
+            data-en={siteConfig.translations.en.elevatorPitchTitle}
+          >
+            {siteConfig.translations.fr.elevatorPitchTitle}
+          </h2>
+
+          <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+            <video
+              class="w-full"
+              controls
+              preload="metadata"
+              poster="/me.jpg"
+            >
+              <source src="/WIN_20261101_22_26_11_Pro (1) (1) (1).mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </section>
     </section>
     <Footer />
   </body>
