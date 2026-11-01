@@ -17,6 +17,8 @@ export const siteConfig = {
       heroName: "Je suis",
       nav: {
         about: "À propos",
+        skills: "Compétences",
+        sports: "Sports & autres activités",
         projects: "Projets",
         experience: "Expérience",
         education: "Formation",
@@ -27,6 +29,7 @@ export const siteConfig = {
       experienceTitle: "Expérience",
       educationTitle: "Formation",
       languagesTitle: "Langues",
+      sportsTitle: "Sports & autres activités",
       allRightsReserved: "Tous droits réservés.",
     },
     en: {
@@ -37,6 +40,8 @@ export const siteConfig = {
       heroName: "I'm",
       nav: {
         about: "About",
+        skills: "Skills",
+        sports: "Sports & Other Activities",
         projects: "Projects",
         experience: "Experience",
         education: "Education",
@@ -47,12 +52,35 @@ export const siteConfig = {
       experienceTitle: "Experience",
       educationTitle: "Education",
       languagesTitle: "Languages",
+      sportsTitle: "Sports & Other Activities",
       allRightsReserved: "All rights reserved.",
     },
   },
   aboutMe:
-    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and creating thoughtful solutions.",
-  skills: ["Python"],
+    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and applying my knowledge to meaningful projects.",
+  skills: ["Python", "MATLAB", "Ada", "Linux", "Copilot", "Git"],
+  sportsAndActivities: [
+    {
+      name: {
+        fr: "Badminton",
+        en: "Badminton",
+      },
+      detail: {
+        fr: "7 ans",
+        en: "7 years",
+      },
+    },
+    {
+      name: {
+        fr: "Autres activités",
+        en: "Other activities",
+      },
+      detail: {
+        fr: "Jeux vidéo, montage vidéo, musculation",
+        en: "Video games, video editing, weightlifting",
+      },
+    },
+  ],
   languages: [
     {
       name: {
