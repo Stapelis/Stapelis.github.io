@@ -1,0 +1,30 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="elevator-pitch" class="p-8 sm:p-12 md:p-16 lg:p-24">
+  <div class="mx-auto max-w-5xl">
+    <h2
+      class="mb-6 text-3xl font-bold"
+      data-fr={siteConfig.translations.fr.elevatorPitchTitle}
+      data-en={siteConfig.translations.en.elevatorPitchTitle}
+    >
+      {siteConfig.translations.fr.elevatorPitchTitle}
+    </h2>
+
+    <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+      <div class="relative aspect-video w-full overflow-hidden bg-black">
+        <video
+          class="block h-full w-full object-cover"
+          controls
+          preload="metadata"
+          poster="/me.jpg"
+          playsinline
+        >
+          <source src="/WIN_20261101_22_26_11_Pro%20(1)%20(1)%20(1).mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
