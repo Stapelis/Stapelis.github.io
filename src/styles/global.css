@@ -1,5 +1,104 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-subtle: #f8fafc;
+  --surface-muted: #e2e8f0;
+  --border: #e5e7eb;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-soft: #64748b;
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+html.dark {
+  --bg: #020817;
+  --surface: #111827;
+  --surface-subtle: #0f172a;
+  --surface-muted: #1e293b;
+  --border: #334155;
+  --text: #e2e8f0;
+  --text-muted: #cbd5e1;
+  --text-soft: #94a3b8;
+  --shadow: rgba(2, 6, 23, 0.5);
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark body {
+  color-scheme: dark;
+}
+
+html:not(.dark) body {
+  color-scheme: light;
+}
+
+html.dark .bg-white {
+  background-color: var(--surface) !important;
+}
+
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+  background-color: var(--surface-subtle) !important;
+}
+
+html.dark .bg-gray-200 {
+  background-color: var(--surface-muted) !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-gray-800,
+html.dark .text-gray-700,
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400 {
+  color: var(--text) !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-gray-500,
+html.dark .text-gray-400 {
+  color: var(--text-muted) !important;
+}
+
+html.dark .border-gray-100,
+html.dark .border-gray-200,
+html.dark .border-gray-300 {
+  border-color: var(--border) !important;
+}
+
+html.dark .shadow-sm,
+html.dark .hover\:shadow-md,
+html.dark .hover\:shadow-xl {
+  box-shadow: 0 1px 3px 0 var(--shadow) !important;
+}
+
+html.dark .bg-gray-900 {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+}
+
+html.dark .text-white {
+  color: #f8fafc !important;
+}
+
+html.dark .text-gray-700 {
+  color: var(--text) !important;
+}
+
+html.dark .text-gray-800 {
+  color: var(--text) !important;
 }
