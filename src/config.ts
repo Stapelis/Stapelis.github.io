@@ -23,6 +23,7 @@ export const siteConfig = {
         experience: "Expérience",
         education: "Formation",
         languages: "Langues",
+        elevatorPitch: "Elevator pitch",
       },
       skillsTitle: "Compétences",
       projectsTitle: "Projets",
@@ -30,6 +31,7 @@ export const siteConfig = {
       educationTitle: "Formation",
       languagesTitle: "Langues",
       sportsTitle: "Sports & autres activités",
+      elevatorPitchTitle: "Elevator pitch",
       allRightsReserved: "Tous droits réservés.",
     },
     en: {
@@ -46,6 +48,7 @@ export const siteConfig = {
         experience: "Experience",
         education: "Education",
         languages: "Languages",
+        elevatorPitch: "Elevator pitch",
       },
       skillsTitle: "Skills",
       projectsTitle: "Projects",
@@ -53,11 +56,12 @@ export const siteConfig = {
       educationTitle: "Education",
       languagesTitle: "Languages",
       sportsTitle: "Sports & Other Activities",
+      elevatorPitchTitle: "Elevator pitch",
       allRightsReserved: "All rights reserved.",
     },
   },
   aboutMe:
-    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and applying my knowledge to meaningful projects.",
+    "I am an engineering student passionate about software development, problem solving, and building useful digital experiences. I enjoy learning new technologies, exploring modern development practices, and collaborating with people who care about meaningful work.",
   skills: ["Python", "MATLAB", "Ada", "Linux", "Copilot", "Git", "Why3", "Coq"],
   sportsAndActivities: [
     {
@@ -216,4 +220,3 @@ export const siteConfig = {
     },
   ],
 };
-
